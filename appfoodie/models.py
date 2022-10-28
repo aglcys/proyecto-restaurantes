@@ -4,7 +4,7 @@ class Restaurante(models.Model):
     nombre = models.CharField(max_length=50)
     direccion = models.CharField(max_length=100)
     telefono = models.IntegerField()
-    rango_precios = models.IntegerField()
+    rango_precios = models.CharField(max_length=10)
     horario = models.CharField(max_length=50)
     tipo_comida =  models.CharField(max_length=20)
     
