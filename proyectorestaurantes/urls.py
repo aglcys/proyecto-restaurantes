@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from appfoodie.views import index, mostrar_restaurantes
+from appfoodie.views import BuscarRestaurante
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', index),
     path('restaurantes/', mostrar_restaurantes), 
-
+    path('restaurantes/buscar', BuscarRestaurante.as_view()),
 ]

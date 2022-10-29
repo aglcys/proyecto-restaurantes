@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    {% extends 'appfoodie/base.html' %}
+    {% block titulo%} Lista de todos mis Restaurantes {% endblock %}
+    {% block contenido %}
 
     <h1>Lista de Restaurantes</h1>
 
@@ -17,10 +20,11 @@
                  Dirección: {{restaurante.direccion}},
                  Telefono: {{restaurante.telefono}},
                  Rango de precios: {{restaurante.rango_precios}},
-                 Horario: {{restaurante.horario},
+                 Horario: {{restaurante.horario}},
              </li>
         </ul>
     {% endfor %}
+    {% endblock %}
     
 </body>
 </html>

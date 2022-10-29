@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+    {% extends 'appfoodie/base.html' %}
+    {% block titulo%} Buscar Restaurantes por nombre {% endblock %}
+    {% block contenido %}
+
+      <h1>buscar restaurante por nombre y por tipo de comida</h1>
+    
+      <form action="/restaurantes/buscar" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+      </form>
+
+      {% for restaurante in lista_restaurantes %}
+      <ul>
+          <li> Nombre: {{restaurante.nombre}}, Tipo de comida: {{restaurante.direccion}}</li>
+      </ul>
+      {% endfor %}
+      {% endblock %}
+
+
+  </body>
+  </html>
