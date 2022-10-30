@@ -30,3 +30,6 @@ class BuscarRestaurante(View):
             return render(request, self.template_name, {'form':form, 
                                                         'lista_restaurantes':lista_restaurantes})
         return render(request, self.template_name, {"form": form})
+
+    def index(request):
+        return render(request, 'appfoodie/index.html')
